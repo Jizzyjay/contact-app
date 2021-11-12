@@ -10,7 +10,7 @@ import ContactList from "./ContactList";
 import ContactDetail from "./ContactDetail";
 
 function App() {
-  const LOCAL_STORAGE_KEY = "contacts";
+  //const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
   const [searchTerm, setSearchTerm]= useState("");
   const [searchResults, setSearchResult] = useState([]);
@@ -35,7 +35,7 @@ const retrieveContacts = async() => {
 
   const updateContactHandler = async(contact) => {
     const response = await api.put(`/contacts/${contact.id}`, contact);
-    const {id, name, email} = response.data;
+    const {id, /*name, email*/} = response.data;
     setContacts(
       contacts.map((contact) => {
       return contact.id == id ? {...response.data} : contact;
