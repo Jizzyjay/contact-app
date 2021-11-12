@@ -38,7 +38,7 @@ const retrieveContacts = async() => {
     const {id, /*name, email*/} = response.data;
     setContacts(
       contacts.map((contact) => {
-      return contact.id == id ? {...response.data} : contact;
+      return contact.id === id ? {...response.data} : contact;
 
     })
     );
