@@ -10,7 +10,7 @@ import ContactList from "./ContactList";
 import ContactDetail from "./ContactDetail";
 
 function App() {
-  //const LOCAL_STORAGE_KEY = "contacts";
+  const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
   const [searchTerm, setSearchTerm]= useState("");
   const [searchResults, setSearchResult] = useState([]);
